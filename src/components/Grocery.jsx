@@ -7,6 +7,10 @@ const Grocery = () => {
   const [data, setData] = useState([]);
 
   const handleAdd = (title) => {
+    if(title == ''){
+      alert('Enter a valid item')
+      return
+    }
     const groceryItem = {
       title: title,
       id: uuid()
